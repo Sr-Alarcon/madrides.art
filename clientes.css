@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Roslindale';
+    src: url('https://uploads-ssl.webflow.com/60db5e59f76ae577e9f50d42/60e4249bd8f95b37bea9f160_RoslindaleDisplayCondensed-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }  
+
+  @font-face {
+    font-family: 'Mint Grotesk';
+    src: url('https://uploads-ssl.webflow.com/60db5e59f76ae577e9f50d42/61eaf216c5a1013af31b58ec_Mint%20Grotesk%20-%20Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+body {
+    background-color: #212121; /* Fondo oscuro */
+    color: #fff; /* Texto en color blanco */
+    font-family: 'Roslindale', 'Mint Grotesk', 'Open Sans', sans-serif; /* Fuente general */
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Título central */
+  h1.text-center {
+    font-size: 5rem;
+    color: #fff;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  /* Estilos para las tarjetas de clientes */
+  .card {
+    background-color: #1a1a1a; /* Fondo para tarjetas */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Mint Grotesk';
+  }
+  
+  /* Botones para ver fotos */
+  .btn {
+    background-color: #111111; /* Color de fondo para botones */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase; /* Texto en mayúsculas */
+  }
+  
+  .btn-primary:hover {
+    background-color: #3c3c3c; /* Color de fondo al pasar el ratón */
+  }
+  
+  /* Flexbox para la disposición de las tarjetas */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 15px;
+  }
+  
+  /* Responsividad para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .container {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  

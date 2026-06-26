@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles.css" rel="stylesheet" />
+
+
+    <title>Procesar imagenes</title>
+</head>
+
+<body>
+
+    <div class="top-bar">Proyecto Magna</div>
+
+    <br>
+
+    <form class="image-upload-container" enctype="multipart/form-data">
+        <input type="file" name="file" id="image-input" multiple onchange="updateImageList()">
+        <div class="ia-input-container">
+            <textarea name="text" id="ia-input" rows="6" placeholder="Escribe tu texto..."></textarea>
+        </div>
+        <button type="submit">Subir y Procesar</button>
+    </form>
+
+    <br>
+
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar..." oninput="filterImages()">
+    </div>
+
+    <div class="image-names" id="image-names"></div>
+
+    <br>
+    <button onclick="removeSelectedImages()">Eliminar Seleccionadas</button>
+
+    <div class="content-grid" id="content-grid">
+        <!-- Aquí se insertarán las imágenes resultantes -->
+    </div>
+
+    <script src="/static/scripts.js"></script>
+
+</body>
+
+</html>
